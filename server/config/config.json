@@ -1,0 +1,18 @@
+{
+  "development": {
+    "username": "ht_backend",
+    "password": "devpassword",
+    "database": "ht_db",
+    "host": "127.0.0.1",
+    "port": "5432",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "tester",
+    "password": "testpassword",
+    "database": "ht_db_test",
+    "host": "127.0.0.1",
+    "port": "5432",    
+    "dialect": "postgres"
+  }
+}
