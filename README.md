@@ -6,7 +6,7 @@ Scaffolded following [scotch.io tutorial](https://scotch.io/tutorials/getting-st
 
 ## How to
 ### Start the server for dev
-Assumes a postgres db is running according to [config](./server/config/config.json), see [how to start a dev db](#Start-a-dev-db-using-docker)
+Assumes a postgres db is running according to [config](./server/config/config.json), see [how to start a dev db](#start-a-dev-db-using-docker)
 ```bash
 npm run start:dev
 ```
