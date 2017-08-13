@@ -40,3 +40,8 @@ You should now be able to connect to `ht_db` as `ht_backend`,
 ```bash
 docker run -it --link ht_postgres:postgres postgres psql -h postgres -U ht_backend -d ht_db
 ```
+
+# Todos
+- secure: ensure only the 'right users' are acknowledged and that all routes require the user to be logged in
+- define and add permissions, which users shall be able to edit / delete votes, links and reviews?
+- address different error types and return correct response codes
