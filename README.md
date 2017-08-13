@@ -2,10 +2,11 @@
 A simple REST api for the ht app, containing routes for users, technologies votes and links.
 
 Scaffolded following [scotch.io tutorial](https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize)
+with correction for sequelize v4.
 
 ## How to
 ### Start the server for dev
-Assumes a postgres db is running according to [config](./server/config/config.json), otherwise see [how to start a dev db](#Start-a-dev-db-using-docker)
+Assumes a postgres db is running according to [config](./server/config/config.json), otherwise see [how to start a dev db](#start-a-dev-db-using-docker)
 ```bash
 npm run start:dev
 ```
