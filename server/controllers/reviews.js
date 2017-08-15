@@ -8,6 +8,14 @@ function createReview(techId, values) {
   });
 }
 
+// Upsert a review
+//
+// params & data
+//    req.body.id           [optional] the id of the review to upsert,
+//                          if not specified review will be created
+//    req.body.userId       the id of the author of the review
+//    req.params.techId     the id of the tech which this review is for
+//
 function upsert(req, res) {
   if (req.body.id) {
     return Review
@@ -32,6 +40,11 @@ function upsert(req, res) {
     .catch(error => res.status(400).send(error));
 }
 
+// Delete a review
+//
+// params & data
+//    req.params.reviewId   the id of the review to delete
+//
 function destroy(req, res) {
   return Review
     .findById(req.params.reviewId)

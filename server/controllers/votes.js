@@ -1,5 +1,12 @@
 const Vote = require('../models').Vote;
 
+
+// Add a vote if does not exist yet
+//
+// params & data
+//    req.params.techId     the id of the tech this vote is for
+//    req.body.userId       the id of the user voting
+//
 function addVote(req, res) {
   return Vote
     .findOne({
@@ -23,6 +30,11 @@ function addVote(req, res) {
     .catch((error) => res.status(400).send(error));
 }
 
+// Delete a vote
+//
+// params & data
+//    req.params.voteId     the id of the vote to delete
+//
 function destroy(req, res) {
   return Vote
     .findById(req.params.voteId)

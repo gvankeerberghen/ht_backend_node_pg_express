@@ -10,6 +10,10 @@ function createTech(values) {
   });
 }
 
+// Get all collection of techs with their links, votes and reviews
+//
+// params & data
+//
 function getAll(req, res) {
   return Technology
     .findAll({
@@ -19,6 +23,17 @@ function getAll(req, res) {
     .catch(error => res.status(500).send(error));
 }
 
+// Upsert a technology
+//
+// params & data
+//    req.body.id           [optional] the id of the tech to upsert,
+//                          if not specified tech will be created
+//    req.body.userId       the id of the user adding the tech
+//    req.body.name         the name of the tech
+//    req.body.type         the type of the tech
+//    req.body.description  [optional] description of the tech
+//    req.body.url          the url of the tech
+//
 function upsert(req, res) {
   if (req.body.id) {
     return Technology

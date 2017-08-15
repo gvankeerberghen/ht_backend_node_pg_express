@@ -10,6 +10,17 @@ function createLink(techId, values) {
   });
 }
 
+// Upsert a link
+//
+// params & data
+//    req.body.id           [optional] the id of the link to upsert,
+//                          if not specified link will be created
+//    req.params.techId     the id of the tech which this link is for
+//    req.body.name         name to give to the tech
+//    req.body.type         type of the tech
+//    req.body.description  [optional] description of the tech
+//    req.body.url          the url of the link
+//
 function upsert(req, res) {
   if (req.body.id) {
     return Link
@@ -34,6 +45,11 @@ function upsert(req, res) {
     .catch(error => res.status(400).send(error));
 }
 
+// Delete a link
+//
+// params & data
+//    req.params.linkId     the id of the link to be deleted
+//
 function destroy(req, res) {
   return Link
     .findById(req.params.linkId)
