@@ -50,4 +50,4 @@ docker run -it --link ht_postgres:postgres postgres psql -h postgres -U ht_backe
 - secure: ensure only the 'right users' are acknowledged and that all routes require the user to be logged in
 - define and add permissions, which users shall be able to edit / delete votes, links and reviews?
 - address different error types and return correct response codes
-- add tests, unit and / or e2e on the API at least
+- add tests, unit and / or e2e at least
