@@ -18,7 +18,7 @@ module.exports = {
         }
       },
       voteUserId: {
-        type: Sequelize.BIGINT,
+        type: Sequelize.STRING,
         allowNull: false,
         onDelete: 'CASCADE',
         references: {

@@ -31,7 +31,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       createdBy: {
-        type: Sequelize.BIGINT,
+        type: Sequelize.STRING,
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
