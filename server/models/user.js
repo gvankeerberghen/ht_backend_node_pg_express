@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       allowNull: false,
       primaryKey: true,
-      type: DataTypes.BIGINT
+      type: DataTypes.STRING
     },
     name: {
       type: DataTypes.STRING,
@@ -13,12 +13,24 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     }
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  User.associate = (models) => {
+      User.hasMany(models.Technology, {
+        foreignKey: 'createdBy',
+        as: 'createdTechnologies',
+      });
+
+      User.hasMany(models.Vote, {
+        foreignKey: 'voteUserId',
+        as: 'votes',
+      });
+
+      User.hasMany(models.Review, {
+        foreignKey: 'reviewUserId',
+        as: 'reviews',
+      });
+  };
+
   return User;
 };
