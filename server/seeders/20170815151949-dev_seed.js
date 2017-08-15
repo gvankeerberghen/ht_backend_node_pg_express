@@ -547,8 +547,5 @@ module.exports = {
       .then(() => queryInterface.bulkInsert('Links', links))
       .then(() => queryInterface.bulkInsert('Votes', votes));
   },
-  down: (queryInterface, Sequelize) => {
-    // Cascading should delete the rest
-    return queryInterface.bulkDelete('Users', users);
-  }
+  down: (queryInterface, Sequelize) => {}
 };

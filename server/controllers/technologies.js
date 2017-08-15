@@ -10,7 +10,7 @@ function createTech(values) {
   });
 }
 
-// Get all collection of techs with their links, votes and reviews
+// Get collection of techs with their links, votes and reviews
 //
 // params & data
 //
